@@ -19,7 +19,7 @@ public class HomeController : Controller
     public IActionResult Index()
     {
         Category c = new Category();
-        c.Name = "weeeeee";
+        c.Name = "Hello";
         _context.Categories.Add(c);
         _context.SaveChanges();
 
