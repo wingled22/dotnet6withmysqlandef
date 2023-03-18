@@ -18,8 +18,10 @@ public class HomeController : Controller
 
     public IActionResult Index()
     {
+
         Category c = new Category();
-        c.Name = "Hello";
+        c.Name = "client";
+
         _context.Categories.Add(c);
         _context.SaveChanges();
 
@@ -29,6 +31,12 @@ public class HomeController : Controller
 
     public IActionResult Privacy()
     {
+        var record = _context.Categories.Where(q => q.Id == 5).FirstOrDefault();
+        record.Name = "abai remar";
+
+        _context.Categories.Update(record);
+        _context.SaveChanges();
+
         return View();
     }
 

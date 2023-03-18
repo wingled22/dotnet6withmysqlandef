@@ -16,7 +16,6 @@ namespace sampleMVC.Entities
         {
         }
 
-        public virtual DbSet<AnotherTable> AnotherTables { get; set; } = null!;
         public virtual DbSet<Category> Categories { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
@@ -33,18 +32,7 @@ namespace sampleMVC.Entities
             modelBuilder.UseCollation("utf8mb4_general_ci")
                 .HasCharSet("utf8mb4");
 
-            modelBuilder.Entity<AnotherTable>(entity =>
-            {
-                entity.ToTable("anotherTable");
-
-                entity.Property(e => e.Id)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("id");
-
-                entity.Property(e => e.Asadfsdf)
-                    .HasColumnType("int(11)")
-                    .HasColumnName("asadfsdf");
-            });
+         
 
             modelBuilder.Entity<Category>(entity =>
             {
