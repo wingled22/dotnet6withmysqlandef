@@ -40,6 +40,16 @@ public class HomeController : Controller
         return View();
     }
 
+    public IActionResult DeleteMe(){
+
+        var record = _context.Categories.Where(q => q.Id == 6).FirstOrDefault();
+        _context.Categories.Remove(record);
+        _context.SaveChanges();
+
+        return View("Index");
+
+    }
+
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
     public IActionResult Error()
     {
