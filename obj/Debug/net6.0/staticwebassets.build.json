@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "xfqZdQDUe3HRZ9pn0Jzz35djYZKPFcIMFfQ64WvtpVU=",
+  "Hash": "hLuQH1siB4ibt2hz5OS1G5YvvDo4aZLoI1NbT1LVRYI=",
   "Source": "sampleMVC",
   "BasePath": "_content/sampleMVC",
   "Mode": "Default",
@@ -49,6 +49,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/obj/Debug/net6.0/scopedcss/projectbundle/sampleMVC.bundle.scp.css"
+    },
+    {
+      "Identity": "/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/wwwroot/.DS_Store",
+      "SourceId": "sampleMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/wwwroot/",
+      "BasePath": "_content/sampleMVC",
+      "RelativePath": ".DS_Store",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/.DS_Store"
     },
     {
       "Identity": "/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/wwwroot/css/site.css",
