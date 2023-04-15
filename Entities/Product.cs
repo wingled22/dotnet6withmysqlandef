@@ -11,6 +11,6 @@ namespace sampleMVC.Entities
         public string Name { get; set; } = null!;
         public string Units { get; set; } = null!;
         public int Stocks { get; set; }
-        public string Status { get; set; } = null!;
+        public string? Status { get; set; } = null;
     }
 }

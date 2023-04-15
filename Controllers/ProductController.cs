@@ -93,7 +93,7 @@ namespace sampleMVC.Controllers
         // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Edit(int id, [Bind("Id,Category,Name,Units,Stocks,Status")] Product product)
+        public async Task<IActionResult> Edit(int id,Product product)
         {
             if (id != product.Id)
             {
@@ -104,6 +104,13 @@ namespace sampleMVC.Controllers
             {
                 try
                 {
+                    if( product.Status == null || product.Status == "false")
+                    {
+                        product.Status = "Inactive";
+                    }else{
+                        product.Status = "Active";
+                    }
+
                     _context.Update(product);
                     await _context.SaveChangesAsync();
                 }
@@ -120,6 +127,8 @@ namespace sampleMVC.Controllers
                 }
                 return RedirectToAction(nameof(Index));
             }
+            ViewBag.categories = _context.Categories.ToList()
+                .Select(x => new SelectListItem{ Text = x.Name, Value = x.Id.ToString()});
             return View(product);
         }
 
