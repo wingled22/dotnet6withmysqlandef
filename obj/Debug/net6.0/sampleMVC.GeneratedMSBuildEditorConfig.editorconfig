@@ -16,18 +16,6 @@ build_property.GenerateRazorMetadataSourceChecksumAttributes =
 build_property.MSBuildProjectDirectory = /Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/Views/Category/Create.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0ZWdvcnkvQ3JlYXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
-[/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/Views/Category/Index.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0ZWdvcnkvSW5kZXguY3NodG1s
-build_metadata.AdditionalFiles.CssScope = 
-
-[/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/Views/Category/Update.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3MvQ2F0ZWdvcnkvVXBkYXRlLmNzaHRtbA==
-build_metadata.AdditionalFiles.CssScope = 
-
 [/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9JbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -36,12 +24,52 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/Views/Product/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9DcmVhdGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/Views/Product/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9EZWxldGUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/Views/Product/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9EZXRhaWxzLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/Views/Product/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9FZGl0LmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/Views/Product/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUHJvZHVjdC9JbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL0Vycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvU2hhcmVkL19WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/Views/Windel/Create.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvV2luZGVsL0NyZWF0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/Views/Windel/Delete.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvV2luZGVsL0RlbGV0ZS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/Views/Windel/Details.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvV2luZGVsL0RldGFpbHMuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/Views/Windel/Edit.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvV2luZGVsL0VkaXQuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/Views/Windel/Index.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvV2luZGVsL0luZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/Views/_ViewImports.cshtml]

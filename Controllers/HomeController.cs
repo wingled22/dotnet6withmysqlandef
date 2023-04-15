@@ -19,11 +19,7 @@ public class HomeController : Controller
     public IActionResult Index()
     {
 
-        Category c = new Category();
-        c.Name = "client";
-
-        _context.Categories.Add(c);
-        _context.SaveChanges();
+       
 
         return View();
 
@@ -31,20 +27,14 @@ public class HomeController : Controller
 
     public IActionResult Privacy()
     {
-        var record = _context.Categories.Where(q => q.Id == 5).FirstOrDefault();
-        record.Name = "abai remar";
-
-        _context.Categories.Update(record);
-        _context.SaveChanges();
+      
 
         return View();
     }
 
     public IActionResult DeleteMe(){
 
-        var record = _context.Categories.Where(q => q.Id == 6).FirstOrDefault();
-        _context.Categories.Remove(record);
-        _context.SaveChanges();
+        
 
         return View("Index");
 

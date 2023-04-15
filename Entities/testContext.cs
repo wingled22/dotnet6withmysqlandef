@@ -17,6 +17,7 @@ namespace sampleMVC.Entities
         }
 
         public virtual DbSet<Category> Categories { get; set; } = null!;
+        public virtual DbSet<Product> Products { get; set; } = null!;
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
@@ -32,8 +33,6 @@ namespace sampleMVC.Entities
             modelBuilder.UseCollation("utf8mb4_general_ci")
                 .HasCharSet("utf8mb4");
 
-         
-
             modelBuilder.Entity<Category>(entity =>
             {
                 entity.ToTable("category");
@@ -45,6 +44,35 @@ namespace sampleMVC.Entities
                 entity.Property(e => e.Name)
                     .HasMaxLength(100)
                     .HasColumnName("name");
+            });
+
+            modelBuilder.Entity<Product>(entity =>
+            {
+                entity.ToTable("product");
+
+                entity.Property(e => e.Id)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("id");
+
+                entity.Property(e => e.Category)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("category");
+
+                entity.Property(e => e.Name)
+                    .HasMaxLength(200)
+                    .HasColumnName("name");
+
+                entity.Property(e => e.Status)
+                    .HasMaxLength(50)
+                    .HasColumnName("status");
+
+                entity.Property(e => e.Stocks)
+                    .HasColumnType("int(11)")
+                    .HasColumnName("stocks");
+
+                entity.Property(e => e.Units)
+                    .HasMaxLength(200)
+                    .HasColumnName("units");
             });
 
             OnModelCreatingPartial(modelBuilder);
