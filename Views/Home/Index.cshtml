@@ -4,7 +4,7 @@
 
 <script src="~/lib/jquery/dist/jquery.js"></script>
 <script>
-    $.ajax("https://localhost:7156/productapi/getallproducts")
+    $.ajax("/productapi/getallproducts")
         .done(function(result){
             result.forEach(function (item){
                 var p = document.createElement("p").innerText = item.name;
