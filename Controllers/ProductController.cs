@@ -6,6 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using sampleMVC.Entities;
+using sampleMVC.ViewModel;
 
 namespace sampleMVC.Controllers
 {
@@ -21,7 +22,24 @@ namespace sampleMVC.Controllers
         // GET: Product
         public async Task<IActionResult> Index()
         {
-            return View(await _context.Products.ToListAsync());
+
+            var result = (
+                from p in _context.Products
+                join c in _context.Categories
+                    on p.Category equals c.Id
+                select new CategoryProductViewModel
+                {
+                    Id = p.Id,
+                    Category = p.Category,
+                    CategoryName = c.Name,
+                    Name = p.Name,
+                    Stocks = p.Stocks,
+                    Status = p.Status,
+                    Units = p.Units
+                }
+            ).ToList();
+
+            return View(result);
         }
 
         // GET: Product/Details/5

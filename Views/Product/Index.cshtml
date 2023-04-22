@@ -1,4 +1,4 @@
-@model IEnumerable<sampleMVC.Entities.Product>
+@model IEnumerable<sampleMVC.ViewModel.CategoryProductViewModel>
 
 @{
     ViewData["Title"] = "Index";
@@ -34,7 +34,7 @@
 @foreach (var item in Model) {
         <tr>
             <td>
-                @Html.DisplayFor(modelItem => item.Category)
+                @Html.DisplayFor(modelItem => item.CategoryName)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Name)
