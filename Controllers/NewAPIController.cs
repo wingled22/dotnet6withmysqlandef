@@ -1,16 +1,14 @@
-using System.Diagnostics;
-using Microsoft.AspNetCore.Cors;
 using Microsoft.AspNetCore.Mvc;
 using sampleMVC.Entities;
-using sampleMVC.Models;
 
 namespace sampleMVC.Controllers
 {
     [Route("api/[controller]/[action]")]
-    public class ProductAPIController : ControllerBase
+    public class NewAPIController : ControllerBase
     {
+
         private readonly testContext _context;
-        public ProductAPIController(testContext context)
+        public NewAPIController(testContext context)
         {
             _context = context;
         }
@@ -19,10 +17,14 @@ namespace sampleMVC.Controllers
             return _context.Categories.ToList();
         }
 
-        [EnableCors]
-        public ActionResult<List<Product>> getAllProducts(){
-            return _context.Products.ToList();
+        public IActionResult saveCategory(string name){
+            Category c = new Category(){
+                Name = name
+            };
+            _context.Categories.Add(c);
+            _context.SaveChanges();
+            return Ok();
         }
-
+        
     }
 }

@@ -2,9 +2,40 @@
     ViewData["Title"] = "Home Page";
 }
 
+<input type="text" name="name" id="catname">
+<input type="text" name="name" id="catname">
+<input type="text" name="name" id="catname">
+<input type="text" name="name" id="catname">
+<input type="text" name="name" id="catname">
+<br>
+<button class ="submitbtn">submit</button>
+
+
 <script src="~/lib/jquery/dist/jquery.js"></script>
 <script>
-    $.ajax("/productapi/getallproducts")
+
+    $(".submitbtn").click(function(){
+        var categoryName = $("#catname").val();
+
+        $.ajax({
+            type: "POST",
+            url: "api/newapi/savecategory",
+            data: {name : categoryName}
+        }).done(function(){
+            $.ajax("api/newapi/getallcategories")
+            .done(function(result){
+                result.forEach(function (item){
+                    var p = document.createElement("p").innerText = item.name;
+                    $("body").append(p + "<br>");
+                });
+            });
+        });
+
+
+    });
+
+
+    $.ajax("api/newapi/getallcategories")
         .done(function(result){
             result.forEach(function (item){
                 var p = document.createElement("p").innerText = item.name;

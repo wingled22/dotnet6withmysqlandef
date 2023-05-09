@@ -3,11 +3,20 @@ using sampleMVC.Entities;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.Services.AddCors(options => {
+    options.AddDefaultPolicy(policy => 
+        policy.AllowAnyHeader()
+            .AllowAnyMethod()
+            .AllowAnyOrigin()
+    );
+});
+
 // Add services to the container.
 builder.Services.AddDbContext<testContext>(options => 
     options.UseMySql("server=localhost;database=test;user=root", Microsoft.EntityFrameworkCore.ServerVersion.Parse("10.4.21-mariadb")));
 
 builder.Services.AddControllersWithViews();
+
 
 
 
@@ -25,6 +34,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseCors();
 
 app.UseAuthorization();
 

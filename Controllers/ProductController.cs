@@ -6,7 +6,6 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using sampleMVC.Entities;
-using sampleMVC.ViewModel;
 
 namespace sampleMVC.Controllers
 {
@@ -23,21 +22,7 @@ namespace sampleMVC.Controllers
         public async Task<IActionResult> Index()
         {
 
-            var result = (
-                from p in _context.Products
-                join c in _context.Categories
-                    on p.Category equals c.Id
-                select new CategoryProductViewModel
-                {
-                    Id = p.Id,
-                    Category = p.Category,
-                    CategoryName = c.Name,
-                    Name = p.Name,
-                    Stocks = p.Stocks,
-                    Status = p.Status,
-                    Units = p.Units
-                }
-            ).ToList();
+            var result = _context.Products.ToList();
 
             return View(result);
         }
@@ -68,9 +53,6 @@ namespace sampleMVC.Controllers
             return View();
         }
 
-        // POST: Product/Create
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Create(Product product)
@@ -106,9 +88,7 @@ namespace sampleMVC.Controllers
             return View(product);
         }
 
-        // POST: Product/Edit/5
-        // To protect from overposting attacks, enable the specific properties you want to bind to.
-        // For more details, see http://go.microsoft.com/fwlink/?LinkId=317598.
+
         [HttpPost]
         [ValidateAntiForgeryToken]
         public async Task<IActionResult> Edit(int id,Product product)
