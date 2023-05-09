@@ -2,31 +2,77 @@
     ViewData["Title"] = "Home Page";
 }
 
-<input type="text" name="name" id="catname">
-<input type="text" name="name" id="catname">
-<input type="text" name="name" id="catname">
-<input type="text" name="name" id="catname">
-<input type="text" name="name" id="catname">
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        
+        <div class="row">
+            <div class="col-6">
+                Name: <input type="text" name="Name">
+            </div>
+            <div class="col-6">
+                Stocks: <input type="text" name="Stocks">
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                Units: <input type="text" name="Units">
+            </div>
+        </div>
+      </div>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary prod-save">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+@* <input type="text" name="name" id="catname">
 <br>
-<button class ="submitbtn">submit</button>
+<button class ="submitbtn">submit</button> *@
+
+<div class="data-container">
+
+</div>
 
 
 <script src="~/lib/jquery/dist/jquery.js"></script>
 <script>
 
-    $(".submitbtn").click(function(){
-        var categoryName = $("#catname").val();
+    $(".prod-save").click(function(){
+        var categoryName = $("input[name=Name]").val();
+        var stocks = $("input[name=Stocks]").val();
+        var units = $("input[name=Units]").val();
 
         $.ajax({
             type: "POST",
             url: "api/newapi/savecategory",
-            data: {name : categoryName}
+            data: {
+                    Name : categoryName,
+                    Stocks : stocks,
+                    Units : units
+                }
         }).done(function(){
-            $.ajax("api/newapi/getallcategories")
+            document.querySelector(".data-container").innerHtml = "";
+            $.ajax("api/newapi/getallprods")
             .done(function(result){
                 result.forEach(function (item){
                     var p = document.createElement("p").innerText = item.name;
-                    $("body").append(p + "<br>");
+                    $(".data-container").append(p + "<br>");
                 });
             });
         });
@@ -35,11 +81,11 @@
     });
 
 
-    $.ajax("api/newapi/getallcategories")
+    $.ajax("api/newapi/getallprods")
         .done(function(result){
             result.forEach(function (item){
                 var p = document.createElement("p").innerText = item.name;
-                $("body").append(p + "<br>");
+                $(".data-container").append(p + "<br>");
             });
         });
 

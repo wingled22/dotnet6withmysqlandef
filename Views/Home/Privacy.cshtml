@@ -3,4 +3,71 @@
 }
 <h1>@ViewData["Title"]</h1>
 
-<p>Use this page to detail your site's privacy policy.</p>
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+  Add category
+</button>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <input type="text" placeholder="category name">
+        <br>
+
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary saveCat">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+<div class="data-container">
+
+</div>
+
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script>
+
+    $(".saveCat").click(function(){
+        
+        var n = $("input").val();
+
+        $.ajax({
+            method : "POST",
+            url : "/api/client/postcat",
+            data : { name : n}
+        }).done(function(){
+            document.querySelector(".data-container").innerHTML = "";
+            $.ajax("/api/client/getcats")
+                .done(function(result){
+                    result.forEach(function (item){
+                        var p = document.createElement("p").innerText = item.name;
+                        $(".data-container").append(p + "<br>");
+                    });
+                });
+
+                @* $("#exampleModal").hide(); *@
+        })
+
+    });
+
+    //get data from api
+    $.ajax("/api/client/getcats")
+        .done(function(result){
+            result.forEach(function (item){
+                var p = document.createElement("p").innerText = item.name;
+                $(".data-container").append(p + "<br>");
+            });
+        });
+
+</script>

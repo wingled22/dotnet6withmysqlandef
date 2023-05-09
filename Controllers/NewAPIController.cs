@@ -17,11 +17,13 @@ namespace sampleMVC.Controllers
             return _context.Categories.ToList();
         }
 
-        public IActionResult saveCategory(string name){
-            Category c = new Category(){
-                Name = name
-            };
-            _context.Categories.Add(c);
+        public ActionResult<List<Product>> getAllprods(){
+            return _context.Products.ToList();
+        }
+
+        public IActionResult saveCategory(Product p){
+            p.Status = "Active";
+            _context.Products.Add(p);
             _context.SaveChanges();
             return Ok();
         }
