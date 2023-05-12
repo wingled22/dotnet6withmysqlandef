@@ -1,0 +1,68 @@
+@{
+    ViewData["Title"] = "Product Pages";
+}
+
+
+<template id="card-container">
+    <div class="card m-2" style="width: 300px;">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            <p class="card-text card-stocks">Unit: </p>
+            <p class="card-text card-units">Stock:</p>
+            <p class="card-text card-status">Status: </p>
+            
+
+            
+            <a class="card-link btn btn-success" data-bs-toggle="tooltip" data-bs-placement="top" title="Tooltip on top">
+                <i class="fa-solid fa-pen"></i>
+            </a>
+            <a class="btn btn-warning">
+                <i class="fa-solid fa-circle-info" style="color: #ffffff;"></i>
+            </a>
+
+            <a class="btn btn-warning">
+               <i class="fa-solid fa-cubes" style="color: #ffffff;"></i>
+            </a>
+            
+            <a class="btn btn-warning">
+                <i class="fa-solid fa-clock-rotate-left" style="color: #ffffff;"></i>
+            </a>
+            <a class="btn btn-danger">
+                <i class="fa-solid fa-trash"></i>
+            </a>
+        </div>
+    </div>
+</template>
+
+<div class="contents flex-row flex-wrap justify-content" style="display: flex; ">
+
+</div>
+
+<script src="~/lib/jquery/dist/jquery.js"></script>
+<script>
+
+  $.ajax("api/newapi/getallprods")
+        .done(function(result){
+
+            var template = document.querySelector("template#card-container");
+            var parent = document.querySelector(".contents");
+
+            result.forEach(function (item){
+                
+                var cloned = template.content.cloneNode(true);
+                cloned.querySelector(".card-title").innerText = item.name;
+                cloned.querySelector(".card-subtitle").innerText = item.categoryName;
+                cloned.querySelector(".card-stocks").innerText += item.stocks;
+                cloned.querySelector(".card-units").innerText += item.units;
+                cloned.querySelector(".card-status").innerText += item.status;
+           
+
+                parent.prepend(cloned);
+
+
+
+            });
+    });
+
+</script>

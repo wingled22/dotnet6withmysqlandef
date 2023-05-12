@@ -1,5 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 using sampleMVC.Entities;
+using sampleMVC.ViewModels;
 
 namespace sampleMVC.Controllers
 {
@@ -17,8 +18,20 @@ namespace sampleMVC.Controllers
             return _context.Categories.ToList();
         }
 
-        public ActionResult<List<Product>> getAllprods(){
-            return _context.Products.ToList();
+        public ActionResult<List<ProductViewModel>> getAllprods(){
+            var prods = (
+                from p in _context.Products
+                join c in _context.Categories
+                on p.Category equals c.Id
+                select new ProductViewModel{
+                    Name = p.Name,
+                    Category = p.Category,
+                    Id = p.Id,
+                    CategoryName = c.Name,
+                    Units = p.Units,
+                    Stocks = p.Stocks
+                }).ToList();
+            return prods;
         }
 
         public IActionResult saveCategory(Product p){

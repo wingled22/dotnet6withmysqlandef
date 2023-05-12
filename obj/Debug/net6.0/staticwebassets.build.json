@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "hLuQH1siB4ibt2hz5OS1G5YvvDo4aZLoI1NbT1LVRYI=",
+  "Hash": "MicgV3Wb/VqG4lKVU1D7QPLtKGWEW568d/NODh/yTdY=",
   "Source": "sampleMVC",
   "BasePath": "_content/sampleMVC",
   "Mode": "Default",
@@ -882,6 +882,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/lib/bootstrap/LICENSE"
+    },
+    {
+      "Identity": "/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/wwwroot/lib/fontawesome/all.min.css",
+      "SourceId": "sampleMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/wwwroot/",
+      "BasePath": "_content/sampleMVC",
+      "RelativePath": "lib/fontawesome/all.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/lib/fontawesome/all.min.css"
+    },
+    {
+      "Identity": "/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/wwwroot/lib/fontawesome/all.min.js",
+      "SourceId": "sampleMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/wwwroot/",
+      "BasePath": "_content/sampleMVC",
+      "RelativePath": "lib/fontawesome/all.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/lib/fontawesome/all.min.js"
     },
     {
       "Identity": "/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
