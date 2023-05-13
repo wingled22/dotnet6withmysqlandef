@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "MicgV3Wb/VqG4lKVU1D7QPLtKGWEW568d/NODh/yTdY=",
+  "Hash": "TB5pc/Qn+6qstb6dlbJRokkSEBU81/alQ4gQz63fyyc=",
   "Source": "sampleMVC",
   "BasePath": "_content/sampleMVC",
   "Mode": "Default",
@@ -117,6 +117,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/js/site.js"
+    },
+    {
+      "Identity": "/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/wwwroot/lib/.DS_Store",
+      "SourceId": "sampleMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/wwwroot/",
+      "BasePath": "_content/sampleMVC",
+      "RelativePath": "lib/.DS_Store",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/lib/.DS_Store"
     },
     {
       "Identity": "/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",

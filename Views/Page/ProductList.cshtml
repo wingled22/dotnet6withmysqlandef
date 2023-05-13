@@ -1,0 +1,46 @@
+<template>
+     <div class="card" style="width: 18rem;">
+        <div class="card-body">
+            <h5 class="card-title">Card title</h5>
+            <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+            @* <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> *@
+            <a class="btn btn-success">
+                <i class="fa-solid fa-pen"></i>
+            </a>
+            <a class="btn btn-warning">
+                <i class="fa-solid fa-circle-info fa-beat-fade" style="color: #ffffff;"></i>
+            </a>
+        </div>
+    </div>
+</template>
+
+
+<div class="d-flex flex-wrap justify-content-evenly contents">
+   
+</div>
+
+<link rel="stylesheet" href="~/lib/fa/all.min.css">
+<script src="~/lib/fa/all.min.js"></script>
+<script src="~/lib/jquery/dist/jquery.js"></script>
+
+<script>
+    $.ajax("../api/newapi/getallprods")
+        .done(function(result){
+            var template = document.querySelector("template");
+            var parent = document.querySelector(".contents");
+
+            result.forEach(function (item){
+                
+                var cloned = template.content.cloneNode(true);
+                cloned.querySelector(".card-title").innerText = item.name;
+                cloned.querySelector(".card-subtitle").innerText = item.categoryName;
+                
+
+                parent.prepend(cloned);
+
+
+
+            });
+    });
+</script>
+

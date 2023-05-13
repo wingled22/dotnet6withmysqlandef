@@ -21,6 +21,10 @@
       "PackagePath": "staticwebassets/js/site.js"
     },
     {
+      "Id": "/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/wwwroot/lib/.DS_Store",
+      "PackagePath": "staticwebassets/lib/.DS_Store"
+    },
+    {
       "Id": "/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/wwwroot/lib/bootstrap/LICENSE",
       "PackagePath": "staticwebassets/lib/bootstrap"
     },
