@@ -2,14 +2,12 @@
     ViewData["Title"] = "Product Pages";
 }
 
-
-
 @Html.Partial("Partials/_CardPartial")
 @Html.Partial("Partials/_ProductAddModalPartial")
 <partial name="Partials/_ProductUpdateModalPartial"/>
 
 <div class="contents flex-row flex-wrap justify-content" style="display: flex; ">
-  @* templated card goes here *@
+  
 </div>
 
 <script src="~/lib/jquery/dist/jquery.js"></script>
@@ -71,7 +69,6 @@
       var dataToPost = {};
       
       var formInputs = $("#addProdForm").serializeArray();
-
       formInputs.forEach(function(item){
         dataToPost[item.name] = item.value;
       });
@@ -98,16 +95,10 @@
       console.log("I was clicked");
     });
 
-    $("body").delegate(".edit-prod","click",function(e){
-      
-      var prodId = $(e.target).closest("a").attr("data-prodId");
-      console.log(prodId);
-      
-    })
-
-    @* $(".contents").delegate(".edit-prod", "click", function getSelectedID(e){
+     $(".contents").delegate(".edit-prod", "click", function (e){
       var i = e.target.closest("a").getAttribute("data-prodId");
       console.log(i);
+      
       if(i !=null){
         selectedProdId = i;
         selectedProd = productList.find(element => element.id == i);
@@ -117,7 +108,7 @@
         initForm(oFormObject, selectedProd);
       }
 
-    }); *@
+    }); 
 
     function initForm(form, data){
 
