@@ -18434,6 +18434,11 @@
       "FileKind": "mvc"
     },
     {
+      "FilePath": "/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/Views/Page/Partials/CardPartial2.cshtml",
+      "TargetPath": "Views\\Page\\Partials\\CardPartial2.cshtml",
+      "FileKind": "mvc"
+    },
+    {
       "FilePath": "/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/Views/Product/Details.cshtml",
       "TargetPath": "Views\\Product\\Details.cshtml",
       "FileKind": "mvc"
