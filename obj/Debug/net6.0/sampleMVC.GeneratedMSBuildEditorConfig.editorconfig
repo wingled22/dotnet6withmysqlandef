@@ -24,6 +24,18 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvSG9tZS9Qcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/Views/Page/Partials/_CardPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFnZS9QYXJ0aWFscy9fQ2FyZFBhcnRpYWwuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/Views/Page/Partials/_ProductAddModalPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFnZS9QYXJ0aWFscy9fUHJvZHVjdEFkZE1vZGFsUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/Views/Page/Partials/_ProductUpdateModalPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFnZS9QYXJ0aWFscy9fUHJvZHVjdFVwZGF0ZU1vZGFsUGFydGlhbC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/Views/Page/Product.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3MvUGFnZS9Qcm9kdWN0LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 

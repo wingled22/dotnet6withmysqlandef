@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "TB5pc/Qn+6qstb6dlbJRokkSEBU81/alQ4gQz63fyyc=",
+  "Hash": "vTmwzpOBOlCdl41NWBdZVLaIGMBABU3evSW7GTPEZvo=",
   "Source": "sampleMVC",
   "BasePath": "_content/sampleMVC",
   "Mode": "Default",
@@ -899,6 +899,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot/lib/bootstrap/LICENSE"
+    },
+    {
+      "Identity": "/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/wwwroot/lib/fa/all.min.css",
+      "SourceId": "sampleMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/wwwroot/",
+      "BasePath": "_content/sampleMVC",
+      "RelativePath": "lib/fa/all.min.css",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/lib/fa/all.min.css"
+    },
+    {
+      "Identity": "/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/wwwroot/lib/fa/all.min.js",
+      "SourceId": "sampleMVC",
+      "SourceType": "Discovered",
+      "ContentRoot": "/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/wwwroot/",
+      "BasePath": "_content/sampleMVC",
+      "RelativePath": "lib/fa/all.min.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot/lib/fa/all.min.js"
     },
     {
       "Identity": "/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/wwwroot/lib/fontawesome/all.min.css",

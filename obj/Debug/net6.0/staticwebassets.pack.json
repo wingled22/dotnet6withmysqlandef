@@ -205,6 +205,14 @@
       "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js.map"
     },
     {
+      "Id": "/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/wwwroot/lib/fa/all.min.css",
+      "PackagePath": "staticwebassets/lib/fa/all.min.css"
+    },
+    {
+      "Id": "/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/wwwroot/lib/fa/all.min.js",
+      "PackagePath": "staticwebassets/lib/fa/all.min.js"
+    },
+    {
       "Id": "/Users/windelpelayo/Documents/dev/dotnet/web/sampleMVC/wwwroot/lib/fontawesome/all.min.css",
       "PackagePath": "staticwebassets/lib/fontawesome/all.min.css"
     },
